@@ -22,26 +22,3 @@ This repository currently contains a prebuilt Android release APK for FairAI.
 adb install -r app-release.apk
 ```
 
-## Verify integrity (SHA-256)
-
-Expected SHA-256 for `app-release.apk`:
-
-```
-B246DE3EE07044B90B2D940F34FFE002377CDD38CA8BA30A4E7129E419CEC735
-```
-
-PowerShell:
-
-```powershell
-Get-FileHash .\app-release.apk -Algorithm SHA256
-```
-
-## Troubleshooting
-
-- **"App not installed"**: uninstall any older build first (signature mismatch can block updates).
-- **"There was a problem parsing the package"**: the APK may be corrupted; re-copy or re-download.
-- **Play Protect warning**: common for sideloaded APKs; proceed only if you trust the source.
-
-## Notes
-
-- Source code is not included in this folder at the moment; this repo is tracking the release artifact.
